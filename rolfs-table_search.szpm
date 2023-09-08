@@ -1,0 +1,29 @@
+{
+  "name": "Rolfs-TableSearch",
+  "version": "1.0.0",
+  "vendor": "Rolf Schmidt",
+  "license": "MIT",
+  "url": "https://github.com/rolfschmidt",
+  "files": [
+    {
+      "location": "app/controllers/tables_controller.rb",
+      "permission": 644
+    },
+    {
+      "location": "app/policies/controllers/tables_controller_policy.rb",
+      "permission": 644
+    },
+    {
+      "location": "config/initializers/rolfs_table_search.rb",
+      "permission": 644
+    },
+    {
+      "location": "config/routes/tables.rb",
+      "permission": 644
+    },
+    {
+      "location": "db/migrate/20230901160349_new_table_api.rb",
+      "permission": 644
+    }
+  ]
+}
