@@ -10,6 +10,7 @@ To use the endpoints you will need a admin with the permissions `admin.table_sea
 
 - [ ] Complex query syntax (`name IN (1,2,3) AND id: 1 AND title: "test"`)
 - [ ] Add endpoints to check database table definitions
+- [ ] Tests
 
 ## How to install the package
 
