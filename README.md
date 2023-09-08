@@ -162,6 +162,7 @@ Exact values match for all columns.
 
 ```
 http://ubuntu-rs:3000/api/v1/tables/tickets?id=1
+http://ubuntu-rs:3000/api/v1/tables/tickets?id_not=1
 ```
 
 ### Date match
