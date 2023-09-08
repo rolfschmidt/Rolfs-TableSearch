@@ -14,8 +14,8 @@ Be aware that this package is still in early development and will be reworked he
 - [x] Empty operator
 - [x] Null operator
 - [x] IN operator
-- [] Complex query syntax (`name IN (1,2,3) AND id: 1 AND title: "test"`)
-- [] Add endpoints to check database table definitions
+- [ ] Complex query syntax (`name IN (1,2,3) AND id: 1 AND title: "test"`)
+- [ ] Add endpoints to check database table definitions
 
 ## Endpoints
 
