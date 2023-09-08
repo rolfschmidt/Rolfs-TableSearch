@@ -22,7 +22,7 @@
       "permission": 644
     },
     {
-      "location": "db/migrate/20230901160349_new_table_api.rb",
+      "location": "db/addon/rolfs_table_search/20230908101316_create_base.rb",
       "permission": 644
     }
   ]
