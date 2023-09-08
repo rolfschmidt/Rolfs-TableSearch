@@ -4,6 +4,8 @@ This package contains the functionality to search database tables of zammad via 
 
 Be aware that this package is still in early development and will be reworked heavily in the next releases.
 
+To use the endpoints you will need a admin with the permissions `admin.table_search`.
+
 ## Current state
 
 - [x] Exact operator
