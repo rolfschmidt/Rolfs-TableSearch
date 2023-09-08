@@ -17,7 +17,7 @@ Be aware that this package is still in early development and will be reworked he
 - [ ] Complex query syntax (`name IN (1,2,3) AND id: 1 AND title: "test"`)
 - [ ] Add endpoints to check database table definitions
 
-# How to install the package
+## How to install the package
 
 1. Click in your admin interface to the area **Admin -> Packages**.
 
