@@ -159,6 +159,9 @@ Range condtions for date columns.
 `ge, gt, le, lt`
 
 `http://ubuntu-rs:3000/api/v1/tables/tickets?created_ge=2023-09-04T10:45:16.017Z`
+`http://ubuntu-rs:3000/api/v1/tables/tickets?created_gt=2023-09-04T10:45:16.017Z`
+`http://ubuntu-rs:3000/api/v1/tables/tickets?created_le=2023-09-04T10:45:16.017Z`
+`http://ubuntu-rs:3000/api/v1/tables/tickets?created_lt=2023-09-04T10:45:16.017Z`
 
 ### Search match
 
