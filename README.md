@@ -177,7 +177,9 @@ http://ubuntu-rs:3000/api/v1/tables/tickets?created_lt=2023-09-04T10:45:16.017Z
 
 Fulltext search string columns.
 
-`http://ubuntu-rs:3000/api/v1/tables/tickets?search=Welcome`
+```
+http://ubuntu-rs:3000/api/v1/tables/tickets?search=Welcome
+```
 
 ### Contains match
 
