@@ -22,7 +22,7 @@ Be aware that this package is still in early development and will be reworked he
 ### All tables
 
 ```bash
-ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Rolfs-TableSearch$ curl -s -uadmin@example.com:test http://ubuntu-rs:3000/api/v1/tables | jq .
+$ curl -s -uadmin@example.com:test http://ubuntu-rs:3000/api/v1/tables | jq .
 {
   "active_job_locks": "ActiveJobLock",
   "activity_streams": "ActivityStream",
@@ -126,7 +126,7 @@ ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Rolfs-TableSearch$ curl -s -uadmin@exa
 ```
 
 ```bash
-ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Rolfs-TableSearch$ curl -s -uadmin@example.com:test http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?id=1 | jq .
+$ curl -s -uadmin@example.com:test http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?id=1 | jq .
 [
   {
     "id": 1,
