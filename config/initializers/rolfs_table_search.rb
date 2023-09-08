@@ -2,10 +2,26 @@
 
 # rubocop:disable Metrics/BlockLength, Metrics/AbcSize
 
+TABLE_SEARCH_DATE_TYPES   = %i[datetime date].freeze
+TABLE_SEARCH_STRING_TYPES = %i[string].freeze
+
 ActiveSupport::Reloader.to_prepare do
   require_dependency 'sql_helper'
 
   SqlHelper.class_eval do
+    def table_search(model, params)
+      generic_objects = model
+      generic_objects = get_condition_sql(generic_objects, params)
+      generic_objects = generic_objects.reorder(Arel.sql(table_search_order_sql(params))).offset(params[:offset]).limit(params[:limit] || 500)
+      generic_objects.map(&:attributes)
+    end
+
+    def table_search_order_sql(params)
+      sort_by  = get_sort_by(params, 'id')
+      order_by = get_order_by(params, 'ASC')
+      get_order(sort_by, order_by)
+    end
+
     def full_text_match(attribute, negated: false)
       stmt = if mysql?
                "MATCH (#{attribute}) AGAINST (?)"
@@ -25,11 +41,11 @@ ActiveSupport::Reloader.to_prepare do
     end
 
     def object_date_columns
-      @object_date_columns ||= @object.columns.select { |c| %i[datetime date].include?(c.sql_type_metadata.type) }
+      @object_date_columns ||= @object.columns.select { |c| TABLE_SEARCH_DATE_TYPES.include?(c.sql_type_metadata.type) }
     end
 
     def object_string_columns
-      @object_string_columns ||= object_columns.select { |c| [:string].include?(c.sql_type_metadata.type) }
+      @object_string_columns ||= object_columns.select { |c| TABLE_SEARCH_STRING_TYPES.include?(c.sql_type_metadata.type) }
     end
 
     def get_condition_sql(relation, params)
@@ -40,8 +56,8 @@ ActiveSupport::Reloader.to_prepare do
       relation = where_regex_match(relation, params)
       relation = where_empty_match(relation, params)
       relation = where_null_match(relation, params)
-      relation = where_in_match(relation, params)
-      relation
+      where_in_match(relation, params)
+
     end
 
     def where_exact_match(relation, params)

@@ -15,23 +15,17 @@ class TablesController < ApplicationController
     @sql_helper ||= ::SqlHelper.new(object: model)
   end
 
-  def order_sql
-    @order_sql ||= begin
-      sort_by  = sql_helper.get_sort_by(params, 'id')
-      order_by = sql_helper.get_order_by(params, 'ASC')
-      sql_helper.get_order(sort_by, order_by)
-    end
+  def show
+    row = sql_helper.table_search(model, params).first
+    render json: row, status: (row.present? ? :ok : :not_found)
   end
 
   def index
-    paginate_with(default: 500)
+    render json: sql_helper.table_search(model, params), status: :ok
+  end
 
-    generic_objects = model
-    generic_objects = sql_helper.get_condition_sql(generic_objects, params)
-    generic_objects = generic_objects.reorder(Arel.sql(order_sql)).offset(pagination.offset).limit(pagination.limit)
-    result          = generic_objects.map(&:attributes)
-
-    render json: result, status: :ok
+  def columns
+    render json: model.columns.to_h { |c| [c.name, c.sql_type_metadata.type] }, status: :ok
   end
 
   def all

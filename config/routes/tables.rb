@@ -5,4 +5,6 @@ Zammad::Application.routes.draw do
 
   match api_path + '/tables', to: 'tables#all', via: :get
   match api_path + '/tables/:table', to: 'tables#index', via: :get
+  match api_path + '/tables/:table/columns', to: 'tables#columns', via: :get
+  match api_path + '/tables/:table/:id', to: 'tables#show', via: :get
 end
