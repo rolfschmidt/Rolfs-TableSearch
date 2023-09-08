@@ -6,7 +6,7 @@ Be aware that this package is still in early development and will be reworked he
 
 To use the endpoints you will need a admin with the permissions `admin.table_search`.
 
-**Note:: Do only use this package with PostgresSQL. There will be no MySQL support anymore, since it already deprecated.**
+**Note: Do only use this package with PostgresSQL. There will be no MySQL support anymore, since it already deprecated.**
 
 ## Todo / Ideas
 
