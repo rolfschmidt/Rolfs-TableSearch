@@ -41,7 +41,6 @@ ActiveSupport::Reloader.to_prepare do
       relation = where_empty_match(relation, params)
       relation = where_null_match(relation, params)
       relation = where_in_match(relation, params)
-      Rails.logger.error relation
       relation
     end
 
