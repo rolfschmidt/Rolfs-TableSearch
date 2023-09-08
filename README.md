@@ -6,16 +6,8 @@ Be aware that this package is still in early development and will be reworked he
 
 To use the endpoints you will need a admin with the permissions `admin.table_search`.
 
-## Current state
+## Todo / Ideas
 
-- [x] Exact operator
-- [x] Date operators
-- [x] Search operator
-- [x] Contains operator
-- [x] Regex operator
-- [x] Empty operator
-- [x] Null operator
-- [x] IN operator
 - [ ] Complex query syntax (`name IN (1,2,3) AND id: 1 AND title: "test"`)
 - [ ] Add endpoints to check database table definitions
 
