@@ -161,7 +161,7 @@ ActiveSupport::Reloader.to_prepare do
     end
 
     def where_in_match(relation, params)
-      object_string_columns.each do |column|
+      object_columns.each do |column|
         value_in = params["#{column.name}_in"]&.split(%r{,\s*})
         if value_in.present?
           relation = relation.where("#{column.name} IN (?)", value_in)
