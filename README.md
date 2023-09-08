@@ -158,10 +158,12 @@ Range condtions for date columns.
 
 `ge, gt, le, lt`
 
-`http://ubuntu-rs:3000/api/v1/tables/tickets?created_ge=2023-09-04T10:45:16.017Z`
-`http://ubuntu-rs:3000/api/v1/tables/tickets?created_gt=2023-09-04T10:45:16.017Z`
-`http://ubuntu-rs:3000/api/v1/tables/tickets?created_le=2023-09-04T10:45:16.017Z`
-`http://ubuntu-rs:3000/api/v1/tables/tickets?created_lt=2023-09-04T10:45:16.017Z`
+```
+http://ubuntu-rs:3000/api/v1/tables/tickets?created_ge=2023-09-04T10:45:16.017Z
+http://ubuntu-rs:3000/api/v1/tables/tickets?created_gt=2023-09-04T10:45:16.017Z
+http://ubuntu-rs:3000/api/v1/tables/tickets?created_le=2023-09-04T10:45:16.017Z
+http://ubuntu-rs:3000/api/v1/tables/tickets?created_lt=2023-09-04T10:45:16.017Z
+```
 
 ### Search match
 
@@ -173,33 +175,43 @@ Fulltext search string columns.
 
 Contains for string columns.
 
-`http://ubuntu-rs:3000/api/v1/tables/tickets?title_contains=Welcome`
-`http://ubuntu-rs:3000/api/v1/tables/tickets?title_contains_not=Welcome`
+```
+http://ubuntu-rs:3000/api/v1/tables/tickets?title_contains=Welcome
+http://ubuntu-rs:3000/api/v1/tables/tickets?title_contains_not=Welcome
+```
 
 ### Regex match
 
 Regex match for string columns
 
-`http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?name_regex=(low|high)`
-`http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?name_regex_not=(low|high)`
+```
+http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?name_regex=(low|high)
+http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?name_regex_not=(low|high)
+```
 
 ### Empty match
 
 Empty match for string columns.
 
-`http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?note_empty=1`
-`http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?note_empty_not=1`
+```
+http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?note_empty=1
+http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?note_empty_not=1
+```
 
 ### Null match
 
 Empty match for all columns.
 
-`http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?note_null=1`
-`http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?note_null_not=1`
+```
+http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?note_null=1
+http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?note_null_not=1
+```
 
 ### In array match
 
 In array for all columns.
 
-`http://ubuntu-rs:3000/api/v1/tables/tickets?id_in=1,2,3`
-`http://ubuntu-rs:3000/api/v1/tables/tickets?id_in_not=1,2,3`
+```
+http://ubuntu-rs:3000/api/v1/tables/tickets?id_in=1,2,3
+http://ubuntu-rs:3000/api/v1/tables/tickets?id_in_not=1,2,3
+```
