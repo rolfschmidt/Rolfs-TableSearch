@@ -17,6 +17,16 @@ Be aware that this package is still in early development and will be reworked he
 - [ ] Complex query syntax (`name IN (1,2,3) AND id: 1 AND title: "test"`)
 - [ ] Add endpoints to check database table definitions
 
+# How to install the package
+
+1. Click in your admin interface to the area **Admin -> Packages**.
+
+2. [Download the current version](https://github.com/rolfschmidt/Rolfs-TableSearch/releases) for the package which is compatible to your zammad version.
+
+3. Install the package.
+
+4. Run all displayed commands in the UI on your shell and restart your zammad service.
+
 ## Endpoints
 
 ### All tables
@@ -217,16 +227,6 @@ In array for all columns.
 http://ubuntu-rs:3000/api/v1/tables/tickets?id_in=1,2,3
 http://ubuntu-rs:3000/api/v1/tables/tickets?id_in_not=1,2,3
 ```
-
-# How to install the package
-
-1. Click in your admin interface to the area **Admin -> Packages**.
-
-2. [Download the current version](https://github.com/rolfschmidt/Rolfs-TableSearch/releases) for the package which is compatible to your zammad version.
-
-3. Install the package.
-
-4. Run all displayed commands in the UI on your shell and restart your zammad service.
 
 # LICENSE
 
