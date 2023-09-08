@@ -105,6 +105,14 @@ $ curl -s -uadmin@example.com:test http://ubuntu-rs:3000/api/v1/tables/ticket_pr
 ]
 ```
 
+#### Pagination
+
+to paginate thorugh the results you can use the `offset` (default: 0) and `limit` (default: 500) parameter.
+
+```bash
+$ curl -s -uadmin@example.com:test http://ubuntu-rs:3000/api/v1/tables/ticket_priorities?id=1&offset=1&limit=100 | jq .
+```
+
 ## Current operators
 
 ### Exact match
