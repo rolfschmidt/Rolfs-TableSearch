@@ -150,7 +150,9 @@ $ curl -s -uadmin@example.com:test http://ubuntu-rs:3000/api/v1/tables/ticket_pr
 
 Exact values match for all columns.
 
-`http://ubuntu-rs:3000/api/v1/tables/tickets?id=1`
+```
+http://ubuntu-rs:3000/api/v1/tables/tickets?id=1
+```
 
 ### Date match
 
