@@ -1,4 +1,4 @@
-# Copyright (C) 2012-2023 Zammad Foundation, https://zammad-foundation.org/
+# Copyright (C) 2012-2025 Zammad Foundation, https://zammad-foundation.org/
 
 class TablesController < ApplicationController
   prepend_before_action :authenticate_and_authorize!
@@ -15,13 +15,13 @@ class TablesController < ApplicationController
     @sql_helper ||= ::SqlHelper.new(object: model)
   end
 
+  def index
+    render json: sql_helper.table_search(model, params), status: :ok
+  end
+
   def show
     row = sql_helper.table_search(model, params).first
     render json: row, status: (row.present? ? :ok : :not_found)
-  end
-
-  def index
-    render json: sql_helper.table_search(model, params), status: :ok
   end
 
   def columns

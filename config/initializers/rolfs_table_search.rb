@@ -1,6 +1,6 @@
-# Copyright (C) 2012-2023 Zammad Foundation, https://zammad-foundation.org/
+# Copyright (C) 2012-2025 Zammad Foundation, https://zammad-foundation.org/
 
-# rubocop:disable Metrics/BlockLength, Metrics/AbcSize
+# rubocop:disable Metrics/BlockLength
 
 TABLE_SEARCH_DATE_TYPES   = %i[datetime date].freeze
 TABLE_SEARCH_STRING_TYPES = %i[string].freeze
@@ -193,4 +193,4 @@ ActiveSupport::Reloader.to_prepare do
   end
 end
 
-# rubocop:enable Metrics/BlockLength, Metrics/AbcSize
+# rubocop:enable Metrics/BlockLength
