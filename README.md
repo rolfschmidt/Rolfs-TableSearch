@@ -192,4 +192,4 @@ http://ubuntu-rs:3000/api/v1/tables/tickets?id_in_not=1,2,3
 
 # LICENSE
 
-MIT
+GNU AFFERO GENERAL PUBLIC LICENSE
